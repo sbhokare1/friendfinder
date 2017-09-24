@@ -10,8 +10,13 @@ import android.widget.ImageView;
 import android.provider.MediaStore;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.widget.ListView;
+import android.widget.ArrayAdapter;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity  {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     ImageView image_rec;
     @Override
@@ -61,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             image_rec.setImageBitmap(imageBitmap);
         }
     }
+
 }
 
 

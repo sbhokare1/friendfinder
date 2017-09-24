@@ -36,10 +36,10 @@
 
             <LinearLayout
                 android:id="@+id/imagescreen"
-                android:layout_width="226dp"
+                android:layout_width="200dp"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:baselineAligned="false"
+                android:orientation="vertical"
                 android:weightSum="1">
 
                 <ImageView
@@ -97,12 +97,28 @@
             android:layout_height="64dp"
             android:orientation="horizontal">
 
+            <EditText
+                android:id="@+id/gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/gender"
+                android:inputType="textPersonName" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:orientation="horizontal"></LinearLayout>
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="91dp"
+                android:layout_weight="1"
+                android:text="Submit Profile" />
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
 
