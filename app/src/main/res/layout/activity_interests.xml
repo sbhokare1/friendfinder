@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent">
+
+<TextView
+    android:id="@+id/interest_text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:height="35dp"
+    android:text="Select you interest!" />
+
+<CheckBox
+    android:id="@+id/checkbox_meal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onCheckboxClicked"
+    android:text="Meal" />
+
+<CheckBox
+    android:id="@+id/checkbox_coffee"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onCheckboxClicked"
+    android:text="Coffee" />
+
+<CheckBox
+    android:id="@+id/checkbox_switch"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onCheckboxClicked"
+    android:text="Nintendo Switch" />
+
+<CheckBox
+    android:id="@+id/checkbox_Soccer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onCheckboxClicked"
+    android:text="Soccer" />
+
+<CheckBox
+    android:id="@+id/checkbox_Basketball"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onCheckboxClicked"
+    android:text="Basketball" />
+
+<CheckBox
+    android:id="@+id/checkbox_volleyball"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onCheckboxClicked"
+    android:text="Volleyball" />
+
+<CheckBox
+    android:id="@+id/checkbox_Tennis"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onCheckboxClicked"
+    android:text="Tennis" />
+
+<CheckBox
+    android:id="@+id/checkbox_chat"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onCheckboxClicked"
+    android:text="Chit-chat!" />
+
+<CheckBox
+    android:id="@+id/checkbox_Pingpong"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onCheckboxClicked"
+    android:text="Ping-Pong" />
+
+<CheckBox
+    android:id="@+id/checkbox_console"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onCheckboxClicked"
+    android:text="Console Gaming" />
+
+<CheckBox
+    android:id="@+id/checkbox_gym"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onCheckboxClicked"
+    android:text="Gym" />
+
+<CheckBox
+    android:id="@+id/checkbox_movie"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onCheckboxClicked"
+    android:text="Movie" />
+
+<CheckBox
+    android:id="@+id/checkbox_game"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onCheckboxClicked"
+    android:text="Sports Game" />
+
+<CheckBox
+    android:id="@+id/checkbox_library"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onCheckboxClicked"
+    android:text="Library" />
+
+<CheckBox
+    android:id="@+id/checkbox_bars"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onCheckboxClicked"
+    android:text="Bars" />
+</LinearLayout>

@@ -7,11 +7,22 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.content.Intent;
 import android.widget.ImageView;
+import android.support.v7.widget.Toolbar;
 import android.provider.MediaStore;
 import android.graphics.Bitmap;
+import android.view.MenuItem;
 import android.graphics.BitmapFactory;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
+import android.location.LocationListener;
+import android.Manifest.permission;
+
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import android.location.Location;
+import android.location.LocationManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +30,21 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity  {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     ImageView image_rec;
+
+
+    //DECLARATIONS FOR LOCATION DETERMINATION
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button image_cap = (Button) findViewById(R.id.button1);
@@ -38,7 +62,41 @@ public class MainActivity extends AppCompatActivity  {
             }
         });
 
+
+
+
+
+        /*//CREATES AN INSTANCE FOR LOCATION
+        mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        mFusedLocationClient.getLastLocation().addOnSuccessListener(this, new OnSuccessListener<Location>() {
+            @Override
+            public void onSuccess(Location location) {
+                // Got last known location. In some rare situations this can be null.
+                if (location != null) {
+                    // Logic to handle location object
+                }
+            }
+        });*/
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_forward:
+                // User chose the "Settings" item, show the app settings UI...
+                return true;
+
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+
+            }
+    }
+
+
+
+
+
 
     private void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -66,6 +124,8 @@ public class MainActivity extends AppCompatActivity  {
             image_rec.setImageBitmap(imageBitmap);
         }
     }
+
+
 
 }
 
