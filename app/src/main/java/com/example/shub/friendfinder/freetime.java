@@ -215,7 +215,7 @@ public class freetime extends AppCompatActivity implements View.OnClickListener 
 
     }
 
-    /*@Override
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_forward:
@@ -231,5 +231,5 @@ public class freetime extends AppCompatActivity implements View.OnClickListener 
 
         }
         return true;
-    }*/
+    }
 }
