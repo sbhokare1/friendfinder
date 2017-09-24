@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.content.Intent;
 import android.widget.ImageView;
+import android.widget.EditText;
 import android.support.v7.widget.Toolbar;
 import android.provider.MediaStore;
 import android.graphics.Bitmap;
@@ -40,14 +41,15 @@ public class MainActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        super.onCreate(savedInstanceState);
+        /*super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
+        setSupportActionBar(myToolbar);*/
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button image_cap = (Button) findViewById(R.id.button1);
+        Button submit = (Button) findViewById(R.id.submit_b);
         Button image_gal = (Button) findViewById(R.id.button_gallery);
         image_rec = (ImageView) findViewById(R.id.imageView3);
 
@@ -59,6 +61,11 @@ public class MainActivity extends AppCompatActivity  {
         image_gal.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 dispatchGetPictureIntent();
+            }
+        });
+         submit.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                dispatchNewActivityIntent();
             }
         });
 
@@ -78,20 +85,24 @@ public class MainActivity extends AppCompatActivity  {
             }
         });*/
     }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+    //@Override
+    /*public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_forward:
+                Intent intent = new Intent(this, freetime.class);
+                this.startActivity(intent);
+                break;
                 // User chose the "Settings" item, show the app settings UI...
-                return true;
 
             default:
                 // If we got here, the user's action was not recognized.
                 // Invoke the superclass to handle it.
                 return super.onOptionsItemSelected(item);
 
-            }
-    }
+        }
+        return true;
+    }*/
+
 
 
 
@@ -109,6 +120,11 @@ public class MainActivity extends AppCompatActivity  {
         Intent getPictureIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(getPictureIntent, 1);
 
+    }
+
+    private void dispatchNewActivityIntent() {
+        Intent intent = new Intent(this, freetime.class);
+        this.startActivity(intent);
     }
 
     @Override

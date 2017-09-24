@@ -1,8 +1,10 @@
 package com.example.shub.friendfinder;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -15,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 public class freetime extends AppCompatActivity implements View.OnClickListener {
 
 
-    private long timeCountInMilliSeconds = 1 * 60000;
+    private long timeCountInMilliSeconds = 60000;
 
     private enum TimerStatus {
         STARTED,
@@ -212,4 +214,22 @@ public class freetime extends AppCompatActivity implements View.OnClickListener 
 
 
     }
+
+    /*@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_forward:
+                Intent intent = new Intent(this, Interests.class);
+                this.startActivity(intent);
+                break;
+            // User chose the "Settings" item, show the app settings UI...
+
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+
+        }
+        return true;
+    }*/
 }
