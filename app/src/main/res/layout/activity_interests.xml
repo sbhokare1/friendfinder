@@ -102,17 +102,10 @@ android:layout_height="fill_parent">
     android:onClick="onCheckboxClicked"
     android:text="Sports Game" />
 
-<CheckBox
-    android:id="@+id/checkbox_library"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:onClick="onCheckboxClicked"
-    android:text="Library" />
+    <Button
+        android:id="@+id/btnShowLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GPS LOCATION" />
 
-<CheckBox
-    android:id="@+id/checkbox_bars"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:onClick="onCheckboxClicked"
-    android:text="Bars" />
 </LinearLayout>

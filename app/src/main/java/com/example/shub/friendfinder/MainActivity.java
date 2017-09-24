@@ -11,31 +11,12 @@ import android.widget.EditText;
 import android.support.v7.widget.Toolbar;
 import android.provider.MediaStore;
 import android.graphics.Bitmap;
-import android.view.MenuItem;
-import android.graphics.BitmapFactory;
-import android.widget.ListView;
-import android.widget.ArrayAdapter;
-import android.location.LocationListener;
-import android.Manifest.permission;
+import android.widget.Toast;
 
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import android.location.Location;
-import android.location.LocationManager;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity  {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     ImageView image_rec;
-
-
-    //DECLARATIONS FOR LOCATION DETERMINATION
-
-
 
 
     @Override
@@ -70,9 +51,6 @@ public class MainActivity extends AppCompatActivity  {
         });
 
 
-
-
-
         /*//CREATES AN INSTANCE FOR LOCATION
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         mFusedLocationClient.getLastLocation().addOnSuccessListener(this, new OnSuccessListener<Location>() {
@@ -85,23 +63,8 @@ public class MainActivity extends AppCompatActivity  {
             }
         });*/
     }
-    //@Override
-    /*public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_forward:
-                Intent intent = new Intent(this, freetime.class);
-                this.startActivity(intent);
-                break;
-                // User chose the "Settings" item, show the app settings UI...
 
-            default:
-                // If we got here, the user's action was not recognized.
-                // Invoke the superclass to handle it.
-                return super.onOptionsItemSelected(item);
 
-        }
-        return true;
-    }*/
 
 
 
