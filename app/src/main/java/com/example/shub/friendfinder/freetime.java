@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -37,14 +38,26 @@ public class freetime extends AppCompatActivity implements View.OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_freetime);
 
         // method call to initialize the views
         initViews();
         // method call to initialize the listeners
         initListeners();
 
+        Button submit2 = (Button) findViewById(R.id.time2interest);
+        submit2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                dispatchNewActivityIntent();
+            }
+        });
 
+
+    }
+
+    private void dispatchNewActivityIntent() {
+        Intent intent = new Intent(this, Interests.class);
+        this.startActivity(intent);
     }
 
     /**
@@ -215,21 +228,6 @@ public class freetime extends AppCompatActivity implements View.OnClickListener 
 
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_forward:
-                Intent intent = new Intent(this, Interests.class);
-                this.startActivity(intent);
-                break;
-            // User chose the "Settings" item, show the app settings UI...
 
-            default:
-                // If we got here, the user's action was not recognized.
-                // Invoke the superclass to handle it.
-                return super.onOptionsItemSelected(item);
 
-        }
-        return true;
-    }
 }

@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity  {
     }
 
     private void dispatchNewActivityIntent() {
-        Intent intent = new Intent(this, Interests.class);
+        Intent intent = new Intent(this, freetime.class);
         this.startActivity(intent);
     }
 
